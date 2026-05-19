@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Desai | Software Engineer & Automation Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure Tailwind to look for the "dark" class on the <html> tag
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html {
@@ -20,42 +26,59 @@
     </style>
 </head>
 
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body
+    class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white transition-colors duration-300">
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-tight text-white">Aryan<span
+            <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Aryan<span
                     class="text-blue-500">Desai</span></span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#experience"
+                    class="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Contact</a>
             </div>
-            <div>
+
+            <div class="flex items-center gap-4">
+                <!-- Dark / Light Mode Toggle Button -->
+                <button id="theme-toggle"
+                    class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors focus:outline-none"
+                    aria-label="Toggle Theme">
+                    <i id="theme-toggle-dark-icon" class="hidden fas fa-moon text-lg"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun text-lg"></i>
+                </button>
+
                 <a href="mailto:aryan81101@gmail.com"
-                    class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">Hire
-                    Me</a>
+                    class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
+                    Hire Me
+                </a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 max-w-5xl mx-auto text-center">
         <span
-            class="px-3 py-1 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 rounded-full border border-blue-500/20">Software
-            Engineer @ Hexaware</span>
-        <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+            class="px-3 py-1 text-xs font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase bg-blue-500/10 rounded-full border border-blue-500/20">
+            Software Engineer @ Hexaware
+        </span>
+        <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Building Technology That Works For <span class="gradient-text">Everyone</span>
         </h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+        <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
             Specialized in Global Accessibility (A11y), AI-driven automation architectures, and creating impactful
             technology solutions that currently benefit billions of users globally.
         </p>
         <div class="mt-10 flex flex-wrap justify-center gap-4">
             <a href="#experience"
-                class="px-6 py-3 font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all">View
-                My Work</a>
+                class="px-6 py-3 font-semibold text-slate-700 dark:text-white bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
+                View My Work
+            </a>
             <a href="https://linkedin.com/in/desaiaryan" target="_blank"
                 class="px-6 py-3 font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-lg shadow-blue-600/20 flex items-center gap-2">
                 <i class="fab fa-linkedin"></i> Connect on LinkedIn
@@ -63,10 +86,12 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-slate-950 border-y border-slate-800/60">
+    <!-- About Section -->
+    <section id="about"
+        class="py-20 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800/60 transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center">About Me</h2>
-            <p class="mt-6 text-slate-400 text-center leading-relaxed text-base sm:text-lg">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white text-center">About Me</h2>
+            <p class="mt-6 text-slate-600 dark:text-slate-400 text-center leading-relaxed text-base sm:text-lg">
                 I operate at the intersection of real-world development and testing framework scaling. By contributing
                 to advanced automation engines, incorporating AI tools like Computer Vision, and championing inclusive
                 accessibility compliance (WCAG 2.1), I help scale digital experiences safely to global audiences.
@@ -74,73 +99,118 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="py-20 max-w-6xl mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-12">Core Capabilities</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">Core Capabilities
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
-                <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4"><i
-                        class="fas fa-code text-lg"></i></div>
-                <h3 class="text-lg font-bold text-white">Development</h3>
-                <p class="mt-2 text-sm text-slate-400 mb-4">Writing structured backend, analytics, and frontend logic
-                    code platforms.</p>
-                <div class="flex flex-wrap gap-2"><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Python</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">HTML</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Javascript</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Tailwind CSS</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Core Java</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Advanced Java</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Spring Boot</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">TypeScript</span></div>
-            </div>
-            <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <!-- Dev Card -->
+            <div
+                class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl transition-colors duration-300">
                 <div
-                    class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4">
+                    class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-code text-lg"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Development</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 mb-4">Writing structured backend, analytics,
+                    and frontend logic code platforms.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Python</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">HTML</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Javascript</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Tailwind
+                        CSS</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Core
+                        Java</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Advanced
+                        Java</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Spring
+                        Boot</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">TypeScript</span>
+                </div>
+            </div>
+            <!-- AI Card -->
+            <div
+                class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl transition-colors duration-300">
+                <div
+                    class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4">
                     <i class="fas fa-robot text-lg"></i>
                 </div>
-                <h3 class="text-lg font-bold text-white">AI Automation</h3>
-                <p class="mt-2 text-sm text-slate-400 mb-4">Leveraging computer vision to interact with complex
-                    non-standard runtime elements.</p>
-                <div class="flex flex-wrap gap-2"><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Roboflow AI</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Appium</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Selenium</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Data pipelines</span></div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">AI Automation</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 mb-4">Leveraging computer vision to interact
+                    with complex non-standard runtime elements.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Roboflow
+                        AI</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Appium</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Selenium</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Data
+                        pipelines</span>
+                </div>
             </div>
-            <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <!-- A11y Card -->
+            <div
+                class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl transition-colors duration-300">
                 <div
-                    class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                    class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
                     <i class="fas fa-universal-access text-lg"></i>
                 </div>
-                <h3 class="text-lg font-bold text-white">Compliance & A11y</h3>
-                <p class="mt-2 text-sm text-slate-400 mb-4">Certified optimization for universal usability standards
-                    across multiple screen formats.</p>
-                <div class="flex flex-wrap gap-2"><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">WCAG 2.1</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">WCAG 2.2</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">DHS Tester</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Axe Core</span><span
-                        class="px-2 py-1 text-xs bg-slate-800 rounded text-slate-300">Localization</span></div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Compliance & A11y</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 mb-4">Certified optimization for universal
+                    usability standards across multiple screen formats.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">WCAG
+                        2.1</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">WCAG
+                        2.2</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">DHS
+                        Tester</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Axe
+                        Core</span>
+                    <span
+                        class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-300">Localization</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-20 bg-slate-950 border-t border-slate-800/60 px-4">
+    <!-- Experience Section -->
+    <section id="experience"
+        class="py-20 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/60 px-4 transition-colors duration-300">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-16">Professional Experience</h2>
-            <div class="space-y-12 border-l-2 border-slate-800 ml-4 md:ml-6 position-relative">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white text-center mb-16">Professional
+                Experience</h2>
+            <div class="space-y-12 border-l-2 border-slate-200 dark:border-slate-800 ml-4 md:ml-6 relative">
 
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-slate-950">
+                    <div
+                        class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-slate-50 dark:ring-slate-950">
                     </div>
-                    <span class="text-xs font-semibold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Jul 2025 -
-                        Present</span>
-                    <h3 class="text-xl font-bold text-white mt-2">Software Engineer Level 1</h3>
-                    <h4 class="text-sm font-medium text-slate-400">Hexaware Technologies</h4>
-                    <ul class="mt-3 text-sm text-slate-400 list-disc list-inside space-y-1">
+                    <span
+                        class="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Jul
+                        2025 - Present</span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Software Engineer Level 1</h3>
+                    <h4 class="text-sm font-medium text-slate-500 dark:text-slate-400">Hexaware Technologies</h4>
+                    <ul class="mt-3 text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
                         <li>Spearheaded interactive game automation loops leveraging AI computer vision model arrays.
                         </li>
-                        <li>Built an localized automation engine module targeting location-spoofing coverage frameworks.
+                        <li>Built a localized automation engine module targeting location-spoofing coverage frameworks.
                         </li>
                         <li>Automated business monitoring workflows, reducing pipeline tracking overhead dependencies.
                         </li>
@@ -148,107 +218,160 @@
                 </div>
 
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-slate-950">
+                    <div
+                        class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-slate-50 dark:ring-slate-950">
                     </div>
-                    <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">Jan 2025 - Jun
-                        2025</span>
-                    <h3 class="text-xl font-bold text-white mt-2">Associate Software Engineer</h3>
-                    <h4 class="text-sm font-medium text-slate-400">Hexaware Technologies</h4>
-                    <p class="mt-2 text-sm text-slate-400">Owned lifecycle regression analysis execution tracks and
-                        verified multi-platform WCAG 2.1 features across international application updates.</p>
+                    <span
+                        class="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">Jan
+                        2025 - Jun 2025</span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Associate Software Engineer</h3>
+                    <h4 class="text-sm font-medium text-slate-500 dark:text-slate-400">Hexaware Technologies</h4>
+                    <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Owned lifecycle regression analysis
+                        execution tracks and verified multi-platform WCAG 2.1 features across international application
+                        updates.</p>
                 </div>
 
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-slate-950">
+                    <div
+                        class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 ring-4 ring-slate-50 dark:ring-slate-950">
                     </div>
-                    <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">Jul 2024 - Dec
-                        2024</span>
-                    <h3 class="text-xl font-bold text-white mt-2">Graduate Engineering Trainee</h3>
-                    <h4 class="text-sm font-medium text-slate-400">Hexaware Technologies</h4>
-                    <p class="mt-2 text-sm text-slate-400">Recognized with the <strong class="text-blue-400">"Dashing
-                            Debutant" Award</strong> for outstanding enterprise contribution efficiency trends across Q4
-                        2024 workflows.</p>
+                    <span
+                        class="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">Jul
+                        2024 - Dec 2024</span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Graduate Engineering Trainee</h3>
+                    <h4 class="text-sm font-medium text-slate-500 dark:text-slate-400">Hexaware Technologies</h4>
+                    <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Recognized with the <strong
+                            class="text-blue-600 dark:text-blue-400">"Dashing Debutant" Award</strong> for outstanding
+                        enterprise contribution efficiency trends across Q4 2024 workflows.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-20 max-w-6xl mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white text-center mb-12">Selected Implementations</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">Selected
+            Implementations</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-2xl hover:border-slate-700 transition-colors">
-                <span class="text-xs font-medium text-blue-400">Data Architecture</span>
-                <h3 class="text-xl font-bold text-white mt-1">YouTube Analytics Engine</h3>
-                <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            <div
+                class="p-6 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+                <span class="text-xs font-medium text-blue-600 dark:text-blue-400">Data Architecture</span>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">YouTube Analytics Engine</h3>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     A python-driven interactive framework visualizing aggregation trends and audience insights via
                     complex backend streams.
                 </p>
-                <div class="mt-4 flex gap-2 text-xs text-slate-400"><span
-                        class="bg-slate-900 px-2 py-1 rounded">Streamlit</span><span
-                        class="bg-slate-900 px-2 py-1 rounded">Data Analytics</span></div>
+                <div class="mt-4 flex gap-2 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Streamlit</span>
+                    <span class="bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Data Analytics</span>
+                </div>
             </div>
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-2xl hover:border-slate-700 transition-colors">
-                <span class="text-xs font-medium text-emerald-400">Full-Stack Application</span>
-                <h3 class="text-xl font-bold text-white mt-1">Enterprise Grocery Manager</h3>
-                <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            <div
+                class="p-6 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+                <span class="text-xs font-medium text-emerald-600 dark:text-emerald-400">Full-Stack Application</span>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Enterprise Grocery Manager</h3>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     Designed and scaled full object-relational model integrations with persistent databases to manage
                     transactional load cleanly.
                 </p>
-                <div class="mt-4 flex gap-2 text-xs text-slate-400"><span
-                        class="bg-slate-900 px-2 py-1 rounded">Java</span><span
-                        class="bg-slate-900 px-2 py-1 rounded">Hibernate</span><span
-                        class="bg-slate-900 px-2 py-1 rounded">Spring</span></div>
+                <div class="mt-4 flex gap-2 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Java</span>
+                    <span class="bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Hibernate</span>
+                    <span class="bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded">Spring</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-16 bg-slate-950 border-t border-slate-800 text-center">
+    <!-- Footer / Contact Section -->
+    <footer id="contact"
+        class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 text-center transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-4 space-y-8">
             <div>
-                <h2 class="text-2xl font-bold text-white mb-2">Get in Touch</h2>
-                <p class="text-slate-400 text-sm max-w-md mx-auto">Let's build something scalable together. Reach out
-                    via email, phone, or professional networks.</p>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Get in Touch</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md mx-auto">Let's build something scalable
+                    together. Reach out via email, phone, or professional networks.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left text-sm">
                 <a href="mailto:aryan81101@gmail.com"
-                    class="p-4 bg-slate-900/60 border border-slate-800/80 rounded-xl hover:border-blue-500/50 transition-all flex items-center gap-3 group">
+                    class="p-4 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl hover:border-blue-500/50 transition-all flex items-center gap-3 group">
                     <div
-                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-500 font-medium">Email Me</p>
-                        <p class="text-slate-300 font-semibold tracking-wide">aryan81101@gmail.com</p>
+                        <p class="text-xs text-slate-400 dark:text-slate-500 font-medium">Email Me</p>
+                        <p class="text-slate-700 dark:text-slate-300 font-semibold tracking-wide">aryan81101@gmail.com
+                        </p>
                     </div>
                 </a>
                 <a href="tel:+918779024130"
-                    class="p-4 bg-slate-900/60 border border-slate-800/80 rounded-xl hover:border-blue-500/50 transition-all flex items-center gap-3 group">
+                    class="p-4 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl hover:border-blue-500/50 transition-all flex items-center gap-3 group">
                     <div
-                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
                         <i class="fas fa-phone"></i>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-500 font-medium">Call Me</p>
-                        <p class="text-slate-300 font-semibold tracking-wide">+91 8779024130</p>
+                        <p class="text-xs text-slate-400 dark:text-slate-500 font-medium">Call Me</p>
+                        <p class="text-slate-700 dark:text-slate-300 font-semibold tracking-wide">+91 8779024130</p>
                     </div>
                 </a>
             </div>
 
             <div class="flex justify-center space-x-6 text-xl pt-2">
                 <a href="https://linkedin.com/in/desaiaryan" target="_blank"
-                    class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
+                    class="text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                    title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/AryanDesai008" target="_blank"
-                    class="text-slate-400 hover:text-blue-400 transition-colors" title="GitHub"><i
-                        class="fab fa-github"></i></a>
+                    class="text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                    title="GitHub"><i class="fab fa-github"></i></a>
             </div>
 
-            <p class="pt-8 text-xs border-t border-slate-900 text-slate-600">&copy; 2026 Aryan Desai. All Rights
-                Reserved.</p>
+            <p class="pt-8 text-xs border-t border-slate-100 dark:border-slate-900 text-slate-400 dark:text-slate-600">
+                &copy; 2026 Aryan Desai. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Theme Control Script -->
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // Identify starting system configuration or past selections
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        // Toggle engine handler
+        themeToggleBtn.addEventListener('click', function () {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
